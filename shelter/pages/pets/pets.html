@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pets.css">
+    <link rel="stylesheet" href="../../assets/fonts.css">
+    <title>Our pets</title>
+</head>
+<body>
+    <!-- Modal -->
+    <div id="popup" class="flex center">
+        <div class="pop-container">
+            <div class="pop-close-btn-wrap flex">
+                <div id="pop-close-btn" class="pop-close-btn-style flex center">
+                    <img src="../../assets/Popup-close.svg" alt="Popup-close">
+                </div>
+            </div>
+            <div class="pop-conten-wrap flex">
+                <div id="pop-img-wrap">
+                    <!-- Modal image <img src="" alt="popup img">-->
+                </div>
+                <div class="pop-text-wrap flex center">
+                    <div class="pop-text">
+                        <div id="pop-header"><p>Pop header</p></div>
+                        <div id="pop-subheader"><p>Pop subheader</p></div>
+                        <div id="pop-main-text"><p>Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p></div>
+                        <div id="pop-list">
+                            <ul>
+                                <li><b>Age:</b></li>
+                                <li><b>Inoculations:</b></li>
+                                <li><b>Diseases:</b></li>
+                                <li><b>Parasites:</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+
+    <!-- Burger menu -->
+    <div id="burger-wrap">
+        <div class="burger-content">
+            <div class="header-wrap">
+                <div class="mobile-header flex">
+                    <a href="../main/index.html">
+                        <div class="logo">
+                            <h1>Cozy House</h1>
+                            <p class="logo-subheader flex">Shelter for pets in Boston</p>
+                        </div>
+                    </a>
+                    <div id="burger-menu-open-btn">
+                        <div class="burger-btn"></div>
+                    </div>
+                </div>
+                <nav id="mobile-nav" class="navigation">
+                    <ul>
+                        <li> <a href="../main/index.html">About the shelter</a> </li>
+                        <li class="m-left-37"> <a id="active" href="../pets/pets.html">Our pets</a></li>
+                        <li class="m-left-37"> <a href="" class="disabled-link">Help the shelter</a> </li>
+                        <li class="m-left-37"> <a href="" class="disabled-link">Contacts</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Burger menu end-->
+    
+    <main class="center">
+        <!-- Header block start -->
+        <header id="header-id" class="flex center sticky">
+            <div id="header-desktop-nav" class="header-content wrapper-1200 flex">
+                <div class="logo-container flex center">
+                    <a href="../main/index.html">
+                        <div class="logo">
+                            <h1>Cozy House</h1>
+                            <p class="logo-subheader flex">Shelter for pets in Boston</p>
+                        </div>
+                    </a>
+                </div>
+                <nav id="desktop-nav" class="navigation flex">
+                    <ul>
+                        <li> <a href="../main/index.html">About the shelter</a> </li>
+                        <li id="active" class="m-left-37"> <a href="../pets/pets.html">Our pets</a></li>
+                        <li class="m-left-37"> <a href="" class="disabled-link">Help the shelter</a> </li>
+                        <li class="m-left-37"> <a href="" class="disabled-link">Contacts</a> </li>
+                    </ul>
+                </nav>
+                <div id="burger-menu-btn">
+                    <div class="burger-btn"></div>
+                </div>
+            </div>
+        </header>
+        <!-- Header block end -->
+
+        <!-- Friends block start -->
+        <div id="our-friends" class="center flex">
+            <div class="our-friends-content wrapper-1200">
+                <div class="our-friends-header-wrap center">
+                    <div class="our-friends-header">
+                        <p>Our friends who </p>
+                        <p>are looking for a house</p>
+                    </div>
+                </div>
+                <div class="our-friends-collection center">
+                    <div id="friends-slider" class="collection-wrapper flex center"></div>
+                </div>
+
+                <div class="slider-nav-block flex center">
+                    <div class="nav-btns-container flex center">
+                        <div id="to-start-page-btn" class="slider-btn slider-btn-nav center disabled">
+                            <p> << </p>
+                        </div>
+                        <div id="prev-page-btn" class="slider-btn slider-btn-nav center disabled">
+                            <p> < </p>
+                        </div>
+                        <div id="page-number" class="slider-btn slider-btn-nav center active">
+                            <p>1</p>
+                        </div>
+                        <div id="next-page-btn" class="slider-btn slider-btn-nav center">
+                            <p> > </p>
+                        </div>
+                        <div id="to-last-page-btn" class="slider-btn slider-btn-nav center">
+                            <p> >> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Friends block end -->
+
+        <!-- Footer block start -->
+        <footer class="center flex gradient-background">
+            <div class="footer-content wrapper-1200 flex">
+                <div class="footer-content-block">
+                    <div class="footer-content-header">
+                        <p>For questions and suggestions</p>
+                    </div>
+                    <div class="footer-content-subtext flex m-top-20">
+                        <img src="../../assets/mail.svg" alt="mail">
+                        <a href="mailto:email@shelter.com" class="flex center m-left-20">
+                            <p>email@shelter.com</p>
+                        </a>
+                    </div>
+                    <div class="footer-content-subtext  flex m-top-45">
+                        <img src="../../assets/icon-phone.svg" alt="icon-phone">
+                        <a href="tel:+136745677554" class="flex center m-left-20">
+                            <p>+13 674 567 75 54</p>
+                        </a>
+                    </div>
+                </div>
+                <div id="second-footer-content" class="footer-content-block">
+                    <div class="footer-content-header">
+                        <p>We are waiting for your visit</p>
+                    </div>
+                    <div class="footer-content-subtext flex m-top-10">
+                        <img src="../../assets/icon-marker.svg" alt="icon-marker">
+                        <a href="https://www.google.com/maps/@53.954009,27.3719519,18.33z" target="_blank" class="geo-text flex center m-left-20">
+                            <p>1 Central Street, Boston (entrance from the store)</p>
+                        </a>
+                    </div>
+                    <div class="footer-content-subtext flex m-top-35">
+                        <img src="../../assets/icon-marker.svg" alt="icon-marker">
+                        <a href="https://www.google.com/maps/@53.9012109,27.5594046,18.54z" target="_blank" class="geo-text flex center m-left-20">
+                            <p>18 South Park, London </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-content-block puppy-img">
+                    <img src="../../assets/footer-puppy.svg" alt="footer-puppy">
+                </div>
+            </div>
+        </footer>
+        <!-- Footer block end -->
+    </main>
+
+    <script src="../../assets/pets.js"></script>
+    <script src="pets_script.js"></script>
+</body>
+</html>
