@@ -32,12 +32,15 @@ main {
     background-color: $main-background
 }
 
-#chat-wrapper {
+#chat-wrapper, #chat-keyboard {
     min-width: 700px;
     max-width: 1000px;
     width: 80%;
+}
+
+#chat-wrapper {
     min-height: 500px;
-    height: 80%;
+    height: 100%;
     background-color: $chat-background;
     box-shadow: $shadow;
     border-radius: $border-radius;
@@ -45,7 +48,7 @@ main {
     #chat-header {
         width: 100%;
         height: 100px;
-        background-color: rgb(126, 206, 126);
+        background-color: rgb(159, 198, 243);
         border-radius: $border-radius;
         box-shadow: 5px 5px 10px rgba(70,70,70, 0.12);
         @include flex;
@@ -66,14 +69,23 @@ main {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                box-shadow: 0px 0px 10px rgba(70,70,70, 0.7);
+                box-shadow: 0px 0px 2px rgb(56, 56, 56);
+            
             }
 
             .nickmane {
-                margin-left: 50px;
-                
+                margin-left: 20px;
+
+                #status-dot {
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    background-color: rgb(97, 201, 65);
+                    box-shadow: 0px 0px 2px rgb(44, 44, 44);
+                }
+
                 p {
-                    width: 150px;
                     text-align: center;
                     letter-spacing: 0.06em;
                 }
@@ -86,14 +98,75 @@ main {
                 .status {
                     font-size: 0.8em;
                     color: rgb(70, 70, 70);
+                    @include flex;
+                    @include center;
                 }
             }
         }
     }
+
+    #chat-field {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 90%;
+            height: 30px;
+            border-radius: 30px;
+            margin-left: 10px;
+            border: 1px solid rgba(139, 139, 139, 0.692);
+            font-size: 20px;
+            color: rgb(65, 65, 65);
+            text-indent: 10px;
+            background-color: rgb(230, 230, 230);
+        }
+
+        input:focus {
+            outline: none;
+        }
+    }
+    #chat-keyboard {
+        position: fixed;
+        bottom: 0;
+        height: auto;
+    }
+    #keyboard-wrap {
+        height: 300px;
+        display: flex;
+        background-color: lightcoral;
+    }
+    #send-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgb(114, 230, 78);
+        margin-left: 2%;
+        @include flex;
+        @include center;
+
+        img {
+            width: 20px;
+            height: 20px;
+            transform: rotate(-90deg);
+        }
+    }
+
+    #send-btn:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    } 
 }
 
 @media(max-width: 720px) {
     html, body { min-height: 300px;}
+    #chat-wrapper, #chat-keyboard {
+        min-width: 320px;
+        width: 100%;
+    }
     #chat-wrapper {
         width: 100%;
         height: 100%;
@@ -102,8 +175,9 @@ main {
         border-radius: 0;
 
         #chat-header {
-            height: 70px;
             border-radius: 0;
+            min-height: 60px;
+            max-height: 70px;
 
             .nickname-wrap {
                 height: 60px;
@@ -115,11 +189,13 @@ main {
 
                 .nickmane {
                     margin-left: 30px;
-                    p { width: 120px; }
                     .name { font-size: 1em; }
                     .status { font-size: 0.6em; }
                 }
             }
         }
+        #send-btn { margin-left: 1%;}
     }
+
+    
 }
