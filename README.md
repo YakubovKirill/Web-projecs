@@ -10,3 +10,6 @@ https://yakubovkirill.github.io/Web-projecs/webdev/
 
 #### Adaptive html, scss, js keyboard
 https://yakubovkirill.github.io/Web-projecs/keyboard/
+
+#### Puzzle game on js with eslint and webpack
+https://yakubovkirill.github.io/Web-projecs/gem-puzzle/
