@@ -9,24 +9,188 @@
 html, body {
   width: 100%;
   height: 100%;
+  min-width: 320px;
 }
 
 main {
   display: flex;
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .content {
-  width: 80%;
-  height: 100%;
-}
-.content .header-wrap {
   width: 100%;
-  height: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content .game-wrap {
+  width: 320px;
+  height: 635px;
+  top: 50px;
+  position: relative;
+}
+.content .game-wrap img {
+  width: 320px;
+}
+.content .game-wrap #win-layout {
+  position: absolute;
+  top: 70px;
+  left: 37px;
+  width: 244px;
+  height: 435px;
+  background-color: rgba(20, 20, 20, 0.6);
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+}
+.content .game-wrap #win-layout #win-label-wrap {
+  width: 80%;
+  height: -webkit-min-content;
+  height: min-content;
+  background-color: #e5ecea;
+  border-radius: 10px;
+}
+.content .game-wrap #win-layout #win-label-wrap p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #0b0f0e;
+}
+.content .game-wrap #win-layout #win-label-wrap:hover {
+  cursor: default;
+}
+.content .game-wrap #win-layout:hover {
+  cursor: pointer;
+}
+.content .game-wrap #display {
+  position: absolute;
+  top: 70px;
+  left: 37px;
+  width: 244px;
+  height: 435px;
+  background-color: #141414;
+}
+.content .game-wrap #display #top-bar {
+  width: 224px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.content .game-wrap #display #name-wrap {
+  width: 244px;
+  height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.content .game-wrap #display #name-wrap h1 {
+  font-weight: normal;
+  letter-spacing: 0.08em;
+}
+.content .game-wrap #display #field {
+  position: absolute;
+  width: 244px;
+  height: 244px;
+  top: 150px;
+}
+.content .game-wrap #display #field .cell {
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: normal;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.content .game-wrap #display #field .cell .cell-content {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: rgba(107, 99, 99, 0.8);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.content .game-wrap #display .wide-btns-wrap {
+  width: 244px;
+  height: 41px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .game-wrap #display .wide-btns-wrap-top {
+  top: 109px;
+}
+.content .game-wrap #display .wide-btns-wrap-top #timer, .content .game-wrap #display .wide-btns-wrap-top #counter {
+  width: 49%;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .game-wrap #display .wide-btns-wrap-top .top-btn-wrap {
+  width: 95%;
+  height: 90%;
+  background-color: #d8caca;
+  border-radius: 20px;
+  color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .game-wrap #display .wide-btns-wrap-top .top-btn-wrap:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.content .game-wrap #display .wide-btns-wrap-bottom {
+  top: 394px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .game-wrap #display .wide-btns-wrap-bottom #field-size-select-btn, .content .game-wrap #display .wide-btns-wrap-bottom #new-game-btn, .content .game-wrap #display .wide-btns-wrap-bottom #play-pause-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .game-wrap #display .wide-btns-wrap-bottom #field-size-select-btn .bottom-btn-wrap, .content .game-wrap #display .wide-btns-wrap-bottom #new-game-btn .bottom-btn-wrap, .content .game-wrap #display .wide-btns-wrap-bottom #play-pause-btn .bottom-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 90%;
+  height: 34px;
+  background-color: #eb9c25;
+  color: #ffffff;
+}
+.content .game-wrap #display .wide-btns-wrap-bottom #field-size-select-btn .bottom-btn-wrap:hover, .content .game-wrap #display .wide-btns-wrap-bottom #new-game-btn .bottom-btn-wrap:hover, .content .game-wrap #display .wide-btns-wrap-bottom #play-pause-btn .bottom-btn-wrap:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.content .game-wrap #display .wide-btns-wrap-bottom #field-size-select-btn, .content .game-wrap #display .wide-btns-wrap-bottom #new-game-btn {
+  width: 50%;
+  height: 40px;
+}
+.content .game-wrap #display .wide-btns-wrap-bottom #play-pause-btn {
+  width: 45px;
+  height: 40px;
 }

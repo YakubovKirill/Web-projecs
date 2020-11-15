@@ -9,25 +9,193 @@
 html, body {
     width: 100%;
     height: 100%;
+    min-width: 320px;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
     display: flex;
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
+    @include center;
 }
 
 .content {
-    width: 80%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 
-    .header-wrap {
-        width: 100%;
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .game-wrap {
+        width: 320px;
+        height: 635px;
+        top: 50px;
+        position: relative;
+
+        img { width: 320px; }
+
+        #win-layout {
+            position: absolute;
+            top: 70px;
+            left: 37px;
+            width: 244px;
+            height: 435px;
+            background-color: rgb(20, 20, 20, 0.6);
+            z-index: 5;
+            @include center;
+            display: none;
+
+            #win-label-wrap {
+                width: 80%;
+                height: min-content;
+                background-color: rgba(229, 236, 234);
+                border-radius: 10px;
+
+                p {
+                    @include center;
+                    position: relative;
+                    margin-top: 20px;
+                    font-size: 22px;
+                    color: rgb(11, 15, 14);
+                }
+            }
+
+            #win-label-wrap:hover {
+                cursor: default;
+            }
+        }
+
+        #win-layout:hover {
+            cursor: pointer;
+        }
+
+        #display {
+            position: absolute;
+            top: 70px;
+            left: 37px;
+            width: 244px;
+            height: 435px;
+            background-color: rgb(20, 20, 20);
+
+            #top-bar {
+                width: 224px;
+                height: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #ffffff;
+                font-size: 12px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            #name-wrap {
+                width: 244px;
+                height: 89px;
+                @include center;
+                color: #ffffff;
+
+                h1 {
+                   font-weight: normal;
+                   letter-spacing: 0.08em;
+                }
+                
+            }
+
+            #field {
+                position: absolute;
+                width: 244px;
+                height: 244px;
+                top: 150px;
+
+                .cell {
+                    border-radius: 50%;
+                    font-size: 30px;
+                    font-weight: normal;
+                    position: absolute;
+                    @include center;
+                    transition: all 0.3s;
+                    
+                    .cell-content {
+                        width: 80%;
+                        height: 80%;
+                        border-radius: 50%;
+                        background-color: rgb(107, 99, 99, 0.8);
+                        
+                        color: #ffffff;
+                        @include center;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .wide-btns-wrap {
+                width: 244px;
+                height: 41px;
+                position: absolute;
+                @include center;
+            }
+
+            .wide-btns-wrap-top {
+                top: 109px;
+
+                #timer, #counter {
+                    width: 49%;
+                    height: 41px;
+                    @include center;
+                }
+
+                .top-btn-wrap {
+                    width: 95%;
+                    height: 90%;
+                    background-color: rgb(216, 202, 202);
+                    border-radius: 20px;
+                    color: rgb(20, 20, 20);
+                    @include center;
+                }
+
+                .top-btn-wrap:hover {
+                    cursor: pointer;
+                    transform: scale(1.01);
+                }
+            }
+            .wide-btns-wrap-bottom {
+                top: 394px;
+                @include center;
+
+                #field-size-select-btn, #new-game-btn, #play-pause-btn {
+                    @include center;
+
+                    .bottom-btn-wrap {
+                        @include center;
+                        border-radius: 20px;
+                        width: 90%;
+                        height: 34px;
+                        background-color: rgb(235, 156, 37);
+                        color: #ffffff;
+                    }
+
+                    .bottom-btn-wrap:hover {
+                        cursor: pointer;
+                        transform: scale(1.01);
+                    }
+                }
+
+                #field-size-select-btn, #new-game-btn {
+                    width: 50%;
+                    height: 40px;
+                }
+
+                #play-pause-btn {
+                    width: 45px;
+                    height: 40px;
+                }
+            }
+        }
     }
 }
