@@ -8,3 +8,6 @@ https://yakubovkirill.github.io/Web-projecs/webdev/
 
 #### Puzzle game on js with eslint and webpack
 https://yakubovkirill.github.io/Web-projecs/gem-puzzle/
+
+#### Adative flex news theme
+https://yakubovkirill.github.io/iCube-theme/
