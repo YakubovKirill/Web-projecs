@@ -1,3 +1,11 @@
+# Telegram bot
+
+#### Restaurant menu bot
+Telegram bot name: @iCubeCafeBot
+
+#### Covid statistic bot
+Telegram bot name: @iCubeWeBot
+
 # Web-projecs
 
 #### Full adaptive website with 2 pages and sliders
