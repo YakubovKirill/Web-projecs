@@ -1,10 +1,10 @@
 # Telegram bot
 
 #### Restaurant menu bot
-Telegram bot name: @iCubeCafeBot
+Telegram bot: https://t.me/iCubeCafeBot
 
 #### Covid statistic bot
-Telegram bot name: @iCubeWeBot
+Telegram bot: https://t.me/iCubeWeBot
 
 # Web-projecs
 
