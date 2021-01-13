@@ -2,9 +2,11 @@
 
 #### Restaurant menu bot
 Telegram bot: https://t.me/iCubeCafeBot
+Git project: https://github.com/YakubovKirill/restaurant-python-telegram-bot
 
 #### Covid statistic bot
 Telegram bot: https://t.me/iCubeWeBot
+Git project: https://github.com/YakubovKirill/covid-python-telegram-bot
 
 # Web-projecs
 
